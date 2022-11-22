@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Task7</title>
+
+    <script>
+
+        function calcSupply(age, maxAge, food, foodperDay)
+        {
+            var time = (maxAge - age) * 365;
+            document.getElementById("result").value = "Maxime will eat "+ foodperDay * time +" kg of "+food+ " in his life";
+        }
+
+    </script>
+</head>
+<body>
+    <br /> <input type="text" id="age" />
+    age
+    <br />
+    <br /><input type="text" id="maxAge" />
+    maxAge
+    <br />
+    <br /><input type="text" id="food" />
+    food
+    <br />
+    <br /><input type="text" id="foodperDay" />
+    foodperDay
+
+    <button onclick="calcSupply(document.getElementById('age').value, document.getElementById('maxAge').value, document.getElementById('food').value, document.getElementById('foodperDay').value)"> Click here to calculate </button>
+    <input type="text" id="result" />
+
+    
+
+</body>
+</html>

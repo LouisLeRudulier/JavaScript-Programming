@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Task6</title>
+    <script>
+        function Conversion(km)
+        {
+            document.getElementById("result").value = km / 1.852;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" id="km" />
+        km/h
+    </div>
+    <button onclick="Conversion(document.getElementById('km').value)"> Click here to convert </button>
+    <input type="text" id="result" />
+
+
+</body>
+
+
+</html>

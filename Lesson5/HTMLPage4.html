@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Task5</title>
+</head>
+<body>
+    <input type="text" id="time" size="10" />
+
+    <script>
+
+    var timerRunning = false;
+        function runClock() {
+            var today = new Date();
+            var hours = today.getHours();
+            var minutes = today.getMinutes();
+            var seconds = today.getSeconds();
+            var timeValue = hours;
+
+            // Les deux prochaines conditions ne servent que pour l'affichage.
+            // Si le nombre de minutes est inférieur à 10, alors on ajoute un 0 devant...
+
+            timeValue += ((minutes < 10) ? ":0" : ":") + minutes;
+            timeValue += ((seconds < 10) ? ":0" : ":") + seconds;
+            document.getElementById("time").value = timeValue;
+            timerRunning = true;
+        }
+
+        var timerID = setInterval(runClock, 1000);
+    
+   
+    </script>
+</body>
+</html>
